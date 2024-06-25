@@ -14,7 +14,6 @@ class Enemy () {
 
     fun destroyed(): Boolean {
         if (health <= 0) {
-            println("$name уничтожен, герой получил $exp опыта")
             return true
         } else return false
     }

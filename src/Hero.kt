@@ -1,5 +1,5 @@
 class Hero(var name: String) {
-    internal var level = 1
+    private var level = 1
     internal var experience = 0
     internal var damage = 1
 
@@ -23,6 +23,14 @@ class Hero(var name: String) {
             experience += enemy.exp
             levelUp()
         }
+    }
+
+    fun getLevel(): Int {
+        return level
+    }
+
+    fun setLevel(level: Int) {
+        this.level = level
     }
 
     override fun toString(): String {

@@ -13,16 +13,6 @@ fun main() {
 
     val enemyArray = listOf(ork, ork2, ork3, ork4, ork5, ork6, ork7, darkElf)
 
-    println ("${hero.name} damage = ${hero.damage} experience = ${hero.experience} level = ${hero.level}")
-
-    for (enemy in enemyArray) {
-        println("Враг $enemy нападает на $hero")
-        if (hero.level >= enemy.recomendedLvl) {
-            println("Герой вступает в бой")
-            while (enemy.health > 0) {
-                hero.hit(enemy)
-            }
-        } else println("Герой трусливо бежит")
-        println ("${hero.name} damage = ${hero.damage} experience = ${hero.experience} level = ${hero.level}")
-    }
+    letsBattle(hero)
+    println ("${hero.name} damage = ${hero.damage} experience = ${hero.experience} level = ${hero.getLevel()}")
 }
